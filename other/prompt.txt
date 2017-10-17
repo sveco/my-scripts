@@ -1,0 +1,3 @@
+prompt $E[0;32;40m%username%$E[1;30;40m@$E[0;32;40m%userdomain%$E[1;30;40m : $E[1;35m$p$E[1;30;40m$_$$$S$E[0m
+
+prompt $E[1;30;40m%username%@%computername%$E[37m in $E[1;35m$p$E[1;33m$_$$$E[1;32m
