@@ -2,7 +2,7 @@
 ; Ctrl+` activates chord, then enter two letter chord
 ; -----------------------------------------------------------------------------
 ^`::
-SplashTextOn, , , Chords active
+SplashTextOn, 250, 100,Chords active, c+p - command prompt`r`ns+g - search selected with google  `r`no+t - make current window on top   
 Input, TextEntry1, L1,{Esc}{Enter}{F1}{Down}{Up}
 endKey=%ErrorLevel%
 WinSetTitle, Chords active, , %TextEntry1% +
@@ -36,6 +36,18 @@ else if entry=sg
 	Clipboard := MyClip
 }
 ; -----------------------------------------------------------------------------
+; Convert dollar to euro using google
+; -----------------------------------------------------------------------------	
+else if entry=cc
+{
+	MyClip := ClipboardAll
+	clipboard = ; empty the clipboard
+	Send, ^c
+	ClipWait 
+	Run "http://www.google.com/#hl=en&q=%clipboard%+usd+in+eur"
+	Clipboard := MyClip
+}
+; -----------------------------------------------------------------------------
 ; Toggle on-top status of active window
 ; -----------------------------------------------------------------------------	
 else if entry=ot
@@ -47,5 +59,32 @@ else if entry=ot
 	WinMove, %title%, , % X+5,% Y-30
 	Sleep, 300
 	SplashTextOff
+}
+; -----------------------------------------------------------------------------
+; Media
+; -----------------------------------------------------------------------------
+else if entry=mn
+{
+	WinGetPos, X, Y, , , A
+	Send, {Media_Next}
+	title := "Media - Next"
+	SplashTextOn, , , %title%
+	WinMove, %title%, , % X+5,% Y-30
+	Sleep, 300
+	SplashTextOff
+}
+else if entry=mb
+{
+	WinGetPos, X, Y, , , A
+	Send, {Media_Prev}
+	title := "Media - Back"
+	SplashTextOn, , , %title%
+	WinMove, %title%, , % X+5,% Y-30
+	Sleep, 300
+	SplashTextOff
+}
+else if entry=tm
+{
+	ToggleMic()
 }
 return

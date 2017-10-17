@@ -2,8 +2,6 @@
 ; Functions
 ; -----------------------------------------------------------------------------
 
-DetectHiddenText, On
-DetectHiddenWindows, On
 
 ; Function to run a program or activate an already running instance
 ; -----------------------------------------------------------------------------
@@ -34,28 +32,29 @@ ReloadScript(){
 ; -----------------------------------------------------------------------------
 GenerateGuid(){
 	tempfile = c:\temp\guid.txt
-	path = "c:\Portable Apps\Utils\CmdLine\guid.exe"
+	path = "c:\PortableApps\Utils\CmdLine\guid.exe"
 	clipboard =  
 	Send ^x
 	ClipWait, 0
 	text = %clipboard%
 	RunWait, %comspec% /c %path% %text%>%tempfile%, , Hide
-	Sleep, 50
+	Sleep, 100
 	FileRead, guid, %tempfile%
-	Sleep, 50
+	Sleep, 100
 	clipboard = %guid%
 	Send ^v
 	guid =
 	return
 }
 
-; Run spotify if not loaded
+; Toggles microphone, requires nircmd.exe
 ; -----------------------------------------------------------------------------
-RunSpotify(){
-Process, Exist, "Spotify.exe"
-    PID = %ErrorLevel%
-    if (PID = 0) {
-    	Run, "C:\Users\Yan\AppData\Roaming\Spotify\Spotify.exe"
-    }
+ToggleMic(){
+	vMyVar := vMyVar ? false : true
+	x1 := "Mic " . (vMyVar ? "Off" : "On")
+	SplashTextOn, 200, 30, Media, %x1%  
+	Run, "C:\Users\janko.svetlik\Documents\My Scripts\NirCmd\nircmd.exe" mutesysvolume 2 "Microphone"
+	Sleep, 200
+	SplashTextOff
 	return
 }

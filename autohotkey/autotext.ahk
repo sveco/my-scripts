@@ -12,5 +12,13 @@
 :*:msj::Svetlik.Janko@gmail.com
 :*:mjs::Janko.Svetlik@gmail.com
 :*:mgm::ultrabrutalac@gmail.com
-;:*:macc::janko.svetlik@accenture.com
-;:*:mava::janko.svetlik@avanade.com
+:*:macc::janko.svetlik@accenture.com
+:*:mava::janko.svetlik@avanade.com
+
+:*:avac::avanade-corp\janko.svetlik
+
+
+; ABB
+; -----------------------------------------------------------------------------
+:*:mcha::janko.svetlik.ext@ch.abb.com
+
