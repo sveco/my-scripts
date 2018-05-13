@@ -1,0 +1,1 @@
+curl "https://dummyimage.com/600x400/bd26bd/fff.jpg&text=Test[001-030]" --output D:\Yan\Documents\temp\#1.jpg --limit-rate 100k

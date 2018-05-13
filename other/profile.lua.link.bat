@@ -1,0 +1,1 @@
+link "D:\Yan\Documents\Repos\my-scripts\other\profile.lua" "D:\Portable Apps\apps\cmder\current\config\profile.lua"
