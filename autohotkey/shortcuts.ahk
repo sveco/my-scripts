@@ -5,7 +5,8 @@
 ; Most used
 ; -----------------------------------------------------------------------------
 #n:: Run notepad.exe
-#c:: Run cmd.exe ; uncomment this for ordinary command prompt
+;#c:: Run cmd.exe ; uncomment this for ordinary command prompt
+#c:: Run "C:\PortableApps\Scoop\apps\cmder\current\Cmder.exe"
 ;#c:: DllCall ("shell32\ShellExecuteA", uint, 0, str, "RunAs", str, ComSpec, str, "", str, A_WorkingDir, int, 1) ; uncomment this for command prompt with elevated priviledges
 #k:: RunOrActivateProgram("C:\PortableApps\Scoop\apps\keepass\current\KeePass.exe")
 #PrintScreen:: Run, "C:\Program Files (x86)\Evernote\Skitch\Skitch.exe"
