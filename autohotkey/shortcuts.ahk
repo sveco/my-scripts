@@ -113,8 +113,8 @@ Return
 ; Misc
 ; -----------------------------------------------------------------------------
 
-; Guid generator
-#g::GenerateGuid()
+; God mode
+#g::Run "Explorer.exe" "Ninja.{ED7BA470-8E54-465E-825C-99712043E01C}"
 
 ; Paste as pure text, http://www.autohotkey.com/community/viewtopic.php?t=11427
 #v::
