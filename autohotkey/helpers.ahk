@@ -5,6 +5,7 @@
 #Include shortcuts.ahk
 #Include shortcuts_app.ahk
 #Include autotext.ahk
+#Include mouse.ahk
 
 ; Tray menu
 Menu, Tray, NoStandard
