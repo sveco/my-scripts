@@ -111,7 +111,7 @@ $image.Dispose()
                                 key.SetValue(@"WallpaperStyle", "6") ; 
                                 key.SetValue(@"TileWallpaper", "0") ; 
                                 break;
-#>
+
 
 
 Write-Output "Setting Wallpaper..."
@@ -139,6 +139,6 @@ SystemParametersInfo( SetDesktopWallpaper, 0, path, UpdateIniFile | SendWinIniCh
 "@
 Add-Type -TypeDefinition $setwallpapersource
 [wallpaper]::SetWallpaper(($outpath + $outfile))
-
+#>
 
 Write-Output "Done"
