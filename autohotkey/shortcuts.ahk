@@ -5,8 +5,8 @@
 ; Most used
 ; -----------------------------------------------------------------------------
 #n:: Run notepad.exe
-;#c:: Run cmd.exe ; uncomment this for ordinary command prompt
-#c:: Run "C:\PortableApps\Scoop\apps\cmder\current\Cmder.exe"
+#c:: Run cmd.exe ; uncomment this for ordinary command prompt
+;#c:: Run "C:\PortableApps\Scoop\apps\cmder\current\Cmder.exe"
 ;#c:: DllCall ("shell32\ShellExecuteA", uint, 0, str, "RunAs", str, ComSpec, str, "", str, A_WorkingDir, int, 1) ; uncomment this for command prompt with elevated priviledges
 #k:: RunOrActivateProgram("C:\PortableApps\Scoop\apps\keepass\current\KeePass.exe")
 #PrintScreen:: Run, "C:\Program Files (x86)\Evernote\Skitch\Skitch.exe"
@@ -24,9 +24,10 @@ Loop
 	IfWinExist, ahk_class TNASTYNAGSCREEN
 	{
 		WinActivate
-		ControlGetText, OutputVar, Window4, Total Commander
+		ControlGetText, OutputVar, Window7, Total Commander
+		;MsgBox, TButton%OutputVar%
 		EnvMult OutputVar, -1
-		EnvAdd OutputVar, 4
+		EnvAdd OutputVar, 8
 		;MsgBox, TButton%OutputVar%
 		ControlClick, Button%OutputVar%
 		Send {ENTER}
