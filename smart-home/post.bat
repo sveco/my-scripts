@@ -1,0 +1,1 @@
+wget --header "Content-Type: text/plain" --header "Accept: application/json" --post-data "ON" "http://192.168.1.99:8080/rest/items/Desk_Light_Trigger" -O NUL

@@ -5,11 +5,11 @@
 ; Most used
 ; -----------------------------------------------------------------------------
 #n:: Run notepad.exe
-#c:: Run "D:\Portable Apps\apps\cmder\current\Cmder.exe" ; uncomment this for ordinary command prompt
+#c:: Run "D:\PortableApps\Scoop\apps\cmder\current\Cmder.exe" ; uncomment this for ordinary command prompt
 ;#c:: DllCall ("shell32\ShellExecuteA", uint, 0, str, "RunAs", str, ComSpec, str, "", str, A_WorkingDir, int, 1) ; uncomment this for command prompt with elevated priviledges
-#k:: RunOrActivateProgram("D:\Portable Apps\Security\KeePass\keepass.exe")
+#k:: RunOrActivateProgram("D:\PortableApps\Security\KeePass\keepass.exe")
 #PrintScreen:: Run, "F:\Program Files (x86)\Evernote\Skitch\Skitch.exe"
-#y:: Run "D:\Portable Apps\Security\Truecrypt\Truecrypt.exe"
+#y:: Run "D:\PortableApps\Security\Truecrypt\Truecrypt.exe"
 #t:: Run, "c:\Program Files (x86)\totalcmd\TOTALCMD64.EXE"
 sc122::RunSpotify()
 Browser_Search::MButton
