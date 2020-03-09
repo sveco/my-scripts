@@ -23,19 +23,18 @@ Loop
 {
 	IfWinExist, ahk_class TNASTYNAGSCREEN
 	{
-		WinActivate
-		ControlGetText, OutputVar, Window7, Total Commander
-		;MsgBox, TButton%OutputVar%
+		WinActivate,
+		Sleep, 1000
+		ControlGetText, OutputVar, Window4
 		EnvMult OutputVar, -1
-		EnvAdd OutputVar, 8
-		;MsgBox, TButton%OutputVar%
-		ControlClick, Button%OutputVar%
+		EnvAdd OutputVar, 4
+		ControlClick, Button%OutputVar%, ahk_class TNASTYNAGSCREEN
 		Send {ENTER}
 		break
 	}
 	else
 	{
-		Sleep 1000
+
 		LoopCount += 1
 	}
 	if (%LoopCount% > 10)

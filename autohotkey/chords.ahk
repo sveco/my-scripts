@@ -61,6 +61,17 @@ else if entry=ot
 	SplashTextOff
 }
 ; -----------------------------------------------------------------------------
+; Insert current date and time
+; -----------------------------------------------------------------------------	
+else if entry=it
+{
+	;MyClip := ClipboardAll
+	FormatTime, TimeString,, yyyy/MM/dd hh:mm
+	;clipboard = %TimeString%
+	Send, %TimeString%
+	;Clipboard := MyClip
+}
+; -----------------------------------------------------------------------------
 ; Media
 ; -----------------------------------------------------------------------------
 else if entry=mn
